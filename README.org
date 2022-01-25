@@ -1,0 +1,28 @@
+* Semantic web forms
+
+  Personal project to explore the possibility and the usability of dynamically
+  generating forms based on the schema class name.
+
+  
+** How does it work?
+
+   The user will enter `https://localhost:3000/form/JobPosting` in the browser,
+   which would request from the server the json representation of the form schema.
+   For this request, the server will return schema for a job posting as defined in
+   `https://schema.org`
+
+   The user enters `https://localhost:3000/form/` in the browser, which would
+   request from the server the list of possible forms.
+
+   When the user post a completed form, the request is sent to
+   `https://localhost:3000/form/JobPosting`
+
+   
+** The selected technology
+
+   The primary language is Clojure and Clojurescript. The backend libraries are
+   - reitit
+   - hugsql (with a sqlite3 DB)
+   - ring
+   - integrant
+   - cheshire
